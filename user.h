@@ -10,6 +10,10 @@
   #include <stdlib.h>
   #define STDLIBH
 #endif
+#ifndef UNISTD
+  #include <unistd.h>
+  #define UNISTD
+#endif
 
 typedef struct login {
   char id[20];
@@ -17,7 +21,8 @@ typedef struct login {
 } LOGIN;
 
 int load_file(LOGIN* list[], char* filename);
-void join(LOGIN* list[], int count);
+int join(LOGIN* list[], int count);
 int login(LOGIN* list[], int count);
 void logout(int* is_login);
+void displayList(LOGIN* list[], int count);
 void save_file(LOGIN* list[], int count, char* filename);
