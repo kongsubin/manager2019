@@ -35,7 +35,7 @@ int ask_menu(int is_login){
         else if(!strcmp("exit", menu))
             return EXIT_0;
         else
-            printf("%s", menu);
+            printf("%s\n", menu);
       }
     }
 }
