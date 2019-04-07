@@ -15,7 +15,7 @@ int load_file(LOGIN* list[], char* filename){
         exit(1);
     }
     else{
-      printf(">Welcome!!");
+      printf(">Welcome!!\n");
       return count;
     }
   }
