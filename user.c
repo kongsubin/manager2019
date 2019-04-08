@@ -87,6 +87,7 @@ int login(LOGIN* list[], int count){
   else{
     printf("Enter password >> ");
     scanf("%s", pass);
+    getchar();
     if(strcmp(list[found]->password, pass)==0){
       printf("Welcome %s!!\n", id);
       return 1;
